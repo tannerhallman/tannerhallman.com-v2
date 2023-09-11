@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tannerhallman.vercel.app/
+
+# Sitemaps
+Sitemap: https://tannerhallman.vercel.app/sitemap.xml
