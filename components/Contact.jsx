@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { TfiLinkedin, TfiTwitterAlt } from "react-icons/tfi";
 
-import Rectangle from "../public/Rectangle.svg";
+import ContactIcon from "../public/contact.png";
 
 const Contact = () => {
   return (
@@ -12,9 +12,7 @@ const Contact = () => {
           Get in touch{" "}
         </h2>
         <p className='text-sm md:text-md font-normal lg:text-lg xl:text-xl '>
-          If you have any queries or would like to discuss potential
-          opportunities, please don&apos;t hesitate to reach out to me using
-          given links.
+          I would love to hear from you!
         </p>
         <div className='grid grid-cols-2 text-[0.7rem] md:text-[0.85rem] lg:text-base gap-2 md:gap-3 lg:gap-4'>
           <a
@@ -38,15 +36,12 @@ const Contact = () => {
           </a>
         </div>
       </div>
-      <div className='order-1 lg:order-2 absolute -rotate-[15deg] lg:rotate-0 lg:flex top-6 right-4 md:top-10 md:right-12 lg:basis-[40%]'>
+      <div className='order-1 lg:order-2 lg:flex top-6 right-4 md:top-10 md:right-12 lg:basis-[40%]'>
         <Image
-          src={Rectangle}
+          src={ContactIcon}
           alt='contact'
-          width={750}
-          height={650}
-          sizes='(max-width: 768px) 100vw,
-          (max-width: 1200px) 50vw,
-          33vw'
+          width={500}
+          height={500}
           loading='lazy'
           className=' select-none backdrop-shadow-xl h-24 w-24 md:h-40 md:w-44 lg:w-[15rem] lg:h-[16rem] xl:w-[16rem] xl:h-[18rem] '
         />

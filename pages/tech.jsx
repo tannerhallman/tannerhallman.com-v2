@@ -15,7 +15,7 @@ const tech = () => {
   const data = [
     {
       title: "React JS",
-      id: 3,
+      id: 0,
       main: "/icons/react-original.svg",
       desc: "A free and open-source front-end JavaScript library for building user interfaces based on components",
       tag: "develop",
@@ -44,7 +44,7 @@ const tech = () => {
 
     {
       title: "Next JS",
-      id: 4,
+      id: 3,
       main: "/icons/nextjs-original.svg",
       desc: "An open-source web development framework providing React-based web applications.",
       tag: "develop",
@@ -53,7 +53,7 @@ const tech = () => {
     },
     {
       title: "Tailwind CSS",
-      id: 5,
+      id: 4,
       main: "/icons/tailwindcss-plain.svg",
       desc: "A utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
       tag: "design",
@@ -62,8 +62,8 @@ const tech = () => {
     },
     {
       title: "Ruby on Rails",
-      id: 6,
-      main: "/icons/tech/rails-icon.svg",
+      id: 5,
+      main: "/tech/rails-icon.svg",
       desc: "Rails is a full-stack framework. It ships with all the tools needed to build amazing Ruby web apps on both the front and back end.",
       tag: "develop",
       bg: "bg-indigo-50",
@@ -71,7 +71,7 @@ const tech = () => {
     },
     {
       title: "SASS",
-      id: 7,
+      id: 6,
       main: "/icons/sass-original.svg",
       desc: "CSS with superpowers. The most powerful professional grade CSS extension language in the world.",
       tag: "design",
@@ -80,7 +80,7 @@ const tech = () => {
     },
     {
       title: "Figma",
-      id: 9,
+      id: 7,
       main: "/icons/figma-original.svg",
       desc: "A boon for webapp designers, from wireframe to animation, it has it all.",
       tag: "design",
@@ -89,7 +89,7 @@ const tech = () => {
     },
     {
       title: "GitHub",
-      id: 10,
+      id: 8,
       main: "/icons/github-original.svg",
       desc: "A developer's go-to platform for collaborating and showcasing their code.",
       tag: "platform",
@@ -98,8 +98,8 @@ const tech = () => {
     },
     {
       title: "GraphQL",
-      id: 11,
-      main: "/icons/tech/graphql-icon.svg",
+      id: 9,
+      main: "/tech/graphql-icon.svg",
       desc: "A query language for APIs and a runtime for fulfilling those queries with your existing data.",
       tag: "platform",
       bg: "bg-orange-500",
@@ -133,6 +133,8 @@ const tech = () => {
     ]);
   }, []);
 
+  const visibleTech = data.find((obj) => Number(obj.id) === Number(idNumber));
+  console.log(visibleTech);
   return (
     <div className='min-h-[75vh] md:min-h-[73vh] px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 xl:px-80 mx-auto'>
       <Head>
@@ -141,7 +143,11 @@ const tech = () => {
       </Head>
       <main className='max-w-screen max-w-5xl mx-auto'>
         <div className='pt-24 flex flex-col mx-auto'>
-          <h2 className='bg-gradient-to-br dark:selection:text-white/80 selection:text-black/70 to-yellow-200 from-red-500 bg-clip-text text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-deca font-bold '>
+          <h2
+            className='selection:text-black/40 dark:selection:text-white/40 font-deca
+          bg-gradient-to-tr from-teal-300 to-blue-500 bg-clip-text
+          text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl
+          xl:text-5xl font-bold'>
             Tech Stack
           </h2>
           <p className='mt-8 font-normal lg:text-lg text-center md:w-[70%] mx-auto text-base md:text-[1.15rem] '>
@@ -158,7 +164,7 @@ const tech = () => {
             <div className='basis-[30%] lg:basis-[25%] h-16 w-12 sm:h-20 sm:w-20 md:h-28 md:w-28 lg:h-32 lg:w-32 rounded-2xl '>
               <div className='flex mx-auto rounded-2xl relative w-full h-full bg-white'>
                 <Image
-                  src={data[idNumber].main}
+                  src={visibleTech?.main}
                   alt='tech'
                   fill
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -169,15 +175,15 @@ const tech = () => {
             <div className=' basis-[70%] lg:basis-[75%] mx-auto transition-all duration-500 '>
               <div className='flex mb-1 justify-between items-center '>
                 <h3 className='text-[0.7rem] sm:text-sm md:text-base lg:text-xl font-semibold font-deca tracking-wide '>
-                  {data[idNumber].title}
+                  {visibleTech?.title}
                 </h3>
                 <div
-                  className={` ${data[idNumber].bg} ${data[idNumber].text} text-[0.45rem] sm:text-[0.6rem] md:text-xs sm:px-1 lg:px-2 rounded-xl h-max fon font-bold`}>
-                  {data[idNumber].tag}
+                  className={` ${visibleTech?.bg} ${visibleTech?.text} text-[0.45rem] sm:text-[0.6rem] md:text-xs sm:px-1 lg:px-2 rounded-xl h-max fon font-bold`}>
+                  {visibleTech?.tag}
                 </div>
               </div>
               <p className=' text-[0.58rem] sm:text-[0.7rem] md:text-[0.9rem] md:text-base lg:text-[1.015rem] font-normal md:w-[90%] '>
-                {data[idNumber].desc}
+                {visibleTech?.desc}
               </p>
             </div>
           </div>

@@ -37,14 +37,14 @@ export default function Home() {
         <title>tanner • cto & co-founder</title>
         <link rel='icon' href='/Avatar-white.svg' />
       </Head>
-      <div className='lg:min-h-screen px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]'>
-        <div className='lg:h-screen 2xl:h-max max-w-[90rem] mx-auto'>
+      <div className='px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]'>
+        <div className='mb-24 max-w-[90rem] mx-auto'>
           <Blob />
           <div className='flex flex-row justify-start items-center mt-20'>
             {currentTheme === "dark" ? (
               <Image
                 src={Avatar_White}
-                className='rounded-lg'
+                className='rounded-lg border-white border-2'
                 alt='tanner'
                 width='100'
                 height='100'
@@ -59,11 +59,14 @@ export default function Home() {
               />
             )}
             <div className='flex flex-col ml-4'>
+              <h3 className='font-bold sm:text-2xl md:text-2xl lg:text-4xl'>
+                Welcome 👋
+              </h3>
               <h2 className='font-bold sm:text-2xl md:text-2xl lg:text-4xl'>
-                tanner hallman
+                i'm tanner hallman 🚀
               </h2>
               <h4 className='text-gray-400 xl:font-bold sm:font-bold md:font-bold sm:text-xl md:text-xl lg:text-2xl'>
-                🚀
+                cto & co-founder
               </h4>
             </div>
           </div>
@@ -83,10 +86,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className='mt-28 mx-auto'>
+        <div className='mt-4 mx-auto'>
           <Experience />
         </div>
-        <div className='mt-28 mx-auto '>
+        <div className='mt-4 mx-auto '>
           <Contact />
         </div>
       </div>

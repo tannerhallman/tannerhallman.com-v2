@@ -67,7 +67,7 @@ export default function About() {
           <CategoryCard />
           <div className=' text-[0.92rem] md:text-base md:text-md lg:text-lg xl:text-xl mx-auto font-light dark:text-white text-gray-900 '>
             <p className='mt-6 mb-12 leading-10 font-normal'>
-              A hard-working and dedicated Engineer who loves to build modern
+              A hard-working and dedicated engineer who loves to build modern
               and user-friendly web applications, scalable & robust APIs, and
               experiences that spark user joy.{" "}
               <span className='inline-flex items-baseline'>
@@ -77,9 +77,9 @@ export default function About() {
                   className='self-center w-8 h-8 mx-1'
                 />
               </span>{" "}
-              I Believe a perfect blend of UI architecture is one, where the
-              goals and needs are accounted for in an elegant, efficient, and
-              robust design of the UI{" "}
+              I believe you should always listen to the customer, and then you
+              should stop listening to the customer. I love to learn, and I love
+              to support my team. They are my family.{" "}
               <span className='inline-flex items-baseline'>
                 <Image
                   src={Sparkles}
@@ -87,11 +87,11 @@ export default function About() {
                   className='self-center w-8 h-8 mx-1'
                 />
               </span>{" "}
-              Experience in ReactJS, React Native, NextJS, and state management
-              like Redux with proficiency in web technologies like HTML5, CSS3,
-              and JavaScript, building large-scale web applications,
-              cross-browser platforms, and design constraints on the web, and
-              building responsive user interfaces.{" "}
+              I have experience many areas including web, mobile, and API
+              development, DevOps & CI/CD, scaling, monitoring, and maintaining
+              production-ready apps. I have used technologies like ReactJS,
+              React Native, NextJS, Rails, Android, NodeJS, CubeJS, GraphQL,
+              PostgreSQL, Redux.
               <span className='inline-flex items-baseline'>
                 <Image
                   src={Flash}
