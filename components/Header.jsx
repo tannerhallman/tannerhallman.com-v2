@@ -23,6 +23,7 @@ const Header = () => {
     { name: "about", link: "/about" },
     { name: "work", link: "/work" },
     { name: "tech", link: "/tech" },
+    { name: "blog", link: "https://codehappier.com" },
   ];
   const [isScrolled, setIsScrolled] = useState(false);
   let [open, setOpen] = useState(false);
