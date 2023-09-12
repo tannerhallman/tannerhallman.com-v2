@@ -81,9 +81,9 @@ const Header = () => {
         <div className='select-none order-2 md:order-1 cursor-pointer flex items-center text-gray-800'>
           <Link href={"/"} className=''>
             {currentTheme === "dark" ? (
-              <Image src={header_white} alt='header' width='100' />
+              <Image src={header_white} alt='header' width='25' height='25' />
             ) : (
-              <Image src={header_black} alt='header' width='100' />
+              <Image src={header_black} alt='header' width='25' height='25' />
             )}
           </Link>
         </div>
