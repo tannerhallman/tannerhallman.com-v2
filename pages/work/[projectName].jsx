@@ -18,11 +18,10 @@ export default function ProjectName({}) {
 
   // get project data
   const project = data.find(
-    (project) => project.slug === projectName.toLowerCase()
+    (project) => project.slug === projectName?.toLowerCase()
   );
 
   if (!project) return null;
-  debugger;
   return (
     <div className='px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]'>
       <Head>
