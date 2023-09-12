@@ -5,9 +5,6 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 import Link from "next/link";
 
-import PIN from "../public/PIN.jpg";
-import Textures from "../public/Textures.jpg";
-
 const Experience = () => {
   const years = new Date().getUTCFullYear() - 2015;
   return (
