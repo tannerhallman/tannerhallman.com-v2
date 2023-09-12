@@ -18,7 +18,7 @@ export default function Document() {
           property='og:description'
           content='CTO, Co-Founder, Stay Learning'
         />
-        <meta property='og:image' content='/public/tanner-cropped.jpg' />
+        <meta property='og:image' content='/public/hello-im-tanner.png' />
 
         {/* <!-- Twitter --> */}
         <meta property='twitter:card' content='summary_large_image' />
@@ -28,7 +28,7 @@ export default function Document() {
           property='twitter:description'
           content='CTO, Co-Founder, Stay Learning'
         />
-        <meta property='twitter:image' content='/public/tanner-cropped.jpg' />
+        <meta property='twitter:image' content='/public/hello-im-tanner.png' />
 
         {/* whatsapp */}
         <meta property='og:site_name' content='tanner • cto & co-founder' />
@@ -40,9 +40,45 @@ export default function Document() {
         <meta
           property='og:image'
           itemprop='image'
-          content='/public/tanner-cropped.jpg'
+          content='/public/hello-im-tanner.png'
         />
         <meta property='og:type' content='website' />
+        <link
+          rel='apple-touch-icon'
+          sizes='76x76'
+          href='/public/apple-touch-icon.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/public/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/public/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/public/site.webmanifest' />
+        <link
+          rel='mask-icon'
+          href='/public/safari-pinned-tab.svg'
+          color='#5bbad5'
+        />
+        <meta name='msapplication-TileColor' content='#000000' />
+        <meta
+          name='theme-color'
+          media='(prefers-color-scheme: light)'
+          content='#fff'
+        />
+        <meta
+          name='theme-color'
+          media='(prefers-color-scheme: dark)'
+          content='#000'
+        />
+        <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
+        <meta content='width=device-width, initial-scale=1' name='viewport' />
 
         {/* canonical links */}
         <link rel='canonical' href='https://tannerhallman.com/' />
