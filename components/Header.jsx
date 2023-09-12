@@ -11,8 +11,8 @@ import { useTheme } from "next-themes";
 
 import Image from "next/image";
 
-import header_black from "../public/logo/logo-black.svg";
-import header_white from "../public/logo/logo-white.svg";
+import header_black from "../public/logo/logo-small-portfolio.svg";
+import header_white from "../public/logo/logo-small-portfolio.svg";
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
