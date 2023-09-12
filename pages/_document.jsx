@@ -18,17 +18,17 @@ export default function Document() {
           property='og:description'
           content='CTO, Co-Founder, Stay Learning'
         />
-        <meta property='og:image' content='/public/hello-im-tanner.png' />
+        <meta property='og:image' content='/hello-im-tanner.png' />
 
         {/* <!-- Twitter --> */}
         <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:url' content='https://tannerhallman.com/' />
+        <meta property='twitter:url' content='https://tannerhallman.com' />
         <meta property='twitter:title' content='tanner • cto & co-founder' />
         <meta
           property='twitter:description'
           content='CTO, Co-Founder, Stay Learning'
         />
-        <meta property='twitter:image' content='/public/hello-im-tanner.png' />
+        <meta property='twitter:image' content='/hello-im-tanner.png' />
 
         {/* whatsapp */}
         <meta property='og:site_name' content='tanner • cto & co-founder' />
