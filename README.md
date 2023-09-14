@@ -1,3 +1,5 @@
+![Welcome Banner](/public/hello-im-tanner.png)
+
 # Welcome to my portfolio!
 Built in [React.js](https://react.dev/),  using the [Next.js](https://nextjs.org/) framework, styled with [TailwindCSS](https://tailwindcss.com/) and deployed on [Vercel](https://vercel.com/).
 
@@ -17,4 +19,4 @@ npm run dev
 ```
 
 ## Credits  
-- This was built using a beautiful template provided by github user [@pranjalshikhar](https://github.com/pranjalshikhar). See it [here](https://github.com/pranjalshikhar/portfolio-v3/tree/main)
+- Based off a (beautiful template)[https://github.com/pranjalshikhar/portfolio-v3] provided by github user [@pranjalshikhar](https://github.com/pranjalshikhar).
