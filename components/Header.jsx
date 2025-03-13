@@ -136,7 +136,7 @@ const Header = () => {
               </Link>
             </li>
           ))}
-          <li
+          {/* <li
             key={4}
             className='md:ml-8  text-base xl:text-[1.1rem] font-regular md:my-0 my-7'>
             <a
@@ -146,7 +146,7 @@ const Header = () => {
               className='text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-500 duration-500'>
               resume
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>
