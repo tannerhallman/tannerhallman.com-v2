@@ -8,7 +8,6 @@ import { FaRegStar } from "react-icons/fa";
 import Image from "next/image";
 
 import GitHub from "../public/icons/github@2x.png";
-import Gmail from "../public/icons/google@2x.png";
 import Instagram from "../public/icons/instagram@2x.png";
 import LinkedIn from "../public/icons/linkedin@2x.png";
 
@@ -57,19 +56,8 @@ const Footer = () => {
           href='https://instagram.com/tannerhallman'
           target='blank'
           className=' dark:hover:text-blue-400 hover:text-blue-600 font-semibold'>
-          {" "}
-          {/* Instagram{" "} */}
           <Image src={Instagram} alt='instagram' width='30' />
         </a>
-        <Link
-          href='mailto:tanner.hallman@gmail.com'
-          target='blank'
-          rel='noreferrer'
-          className=' dark:hover:text-blue-400 hover:text-blue-600 font-semibold'>
-          {" "}
-          {/* Résumé{" "} */}
-          <Image src={Gmail} alt='gmail' width='30' />
-        </Link>
       </div>
       <a
         href='https://github.com/tannerhallman/tannerhallman.com-v2'

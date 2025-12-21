@@ -1,54 +1,36 @@
-import Image from "next/image";
-
-import { FiFileText } from "react-icons/fi";
 import { BsArrowUpRight } from "react-icons/bs";
-
 import Link from "next/link";
 
 const Experience = () => {
   const years = new Date().getUTCFullYear() - 2015;
   return (
-    <div className=' mt-8 lg:mt-8 flex flex-col justify-start space-y-12 mx-auto items-center'>
-      <div className='bg-blue-300 w-36 h-36 rounded-lg p-4 select-none '>
-        <div className='bg-blue-400  h-28 w-28 flex-col justify-end mx-auto blur-none z-40 items-center text-center text-xl text-white font-medium rounded-lg p-2'>
-          <div className='basis-[60%] text-5xl font-black '>
-            <h2 className='text-border mt-1 '>{years}</h2>
+    <div className='mt-8 lg:mt-8 flex flex-col justify-start space-y-8 mx-auto items-center'>
+      <div className='bg-gray-100 dark:bg-gray-800 w-32 h-32 rounded-xl p-3 select-none border border-gray-200 dark:border-gray-700'>
+        <div className='bg-blue-600 h-full w-full flex-col justify-center mx-auto items-center text-center text-white font-medium rounded-lg p-2'>
+          <div className='text-4xl font-bold mt-2'>
+            <h2>{years}</h2>
           </div>
-          <div className='basis-[30%] text-xs mt-3 font-bold'>
+          <div className='text-xs mt-2 font-medium opacity-90'>
             Years of Experience
           </div>
         </div>
       </div>
       <div className='w-[80%] mx-auto'>
-        <div className='text-center max-w-2xl mx-auto tracking-normal leading-5 text-base lg:text-lg'>
-          During these {years} years, I have spent time developing, scaling a
-          SaaS company, building a tech team, and managing many different
-          projects. I have launched production apps in web, mobile, and backend
-          technologies. I have developed a unique skill set that allows me to
-          build for the long-term strategy while still making the day-to-day
-          productive and efficient. I have enjoyed every minute of my journey.
-        </div>
+        <p className='text-center max-w-2xl mx-auto tracking-normal leading-relaxed text-base lg:text-lg text-gray-600 dark:text-gray-400'>
+          {years} years of building products, scaling teams, and shipping code.
+          From co-founding a SaaS startup to architecting enterprise platforms,
+          I've worked across the full stack and led teams through every stage of product development.
+        </p>
       </div>
 
       <div className='w-[80%] max-w-2xl mx-auto'>
-        <div className='flex justify-center space-x-3 md:space-x-6 lg:space-x-8 items-center  my-4'>
-          {/* <div className='group border-blue-400 hover:bg-blue-400 hover:text-white hover:drop-shadow-2xl text-blue-500 rounded-md md:rounded-xl px-2 py-1 md:px-4 md:py-2 shadow-md drop-shadow-lg dark:bg-blue-400 dark:shadow-none dark:hover:shadow-white select-none dark:text-white shadow-blue-300 '>
-            <Link
-              href='/Resume-Tanner-Hallman.pdf'
-              target='_blank'
-              className='flex items-center font-normal lg:font-bold space-x-2 text-sm md:text-base'>
-              <FiFileText className='dark:stroke-white stroke-blue-400 stroke-2 group-hover:stroke-white ' />
-              <p>Download My Resume</p>
-            </Link>
-          </div> */}
-          <div className=' group border-blue-400 hover:bg-blue-400 text-blue-500 hover:text-white hover:drop-shadow-2xl rounded-md md:rounded-xl px-2 py-1 md:px-4 md:py-2 shadow-md drop-shadow-lg dark:bg-blue-400 dark:shadow-none dark:hover:shadow-white select-none dark:text-white shadow-blue-300'>
-            <Link
-              href='/work'
-              className='flex items-center font-normal lg:font-bold space-x-2 text-sm md:text-base  '>
-              <BsArrowUpRight className=' dark:stroke-white stroke-blue-400 stroke-2 group-hover:stroke-white ' />
-              <p>See My Work</p>
-            </Link>
-          </div>
+        <div className='flex justify-center items-center'>
+          <Link
+            href='/work'
+            className='flex items-center font-medium space-x-2 text-sm md:text-base bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-5 py-2.5 transition-colors'>
+            <BsArrowUpRight className='stroke-2' />
+            <span>See My Work</span>
+          </Link>
         </div>
       </div>
     </div>

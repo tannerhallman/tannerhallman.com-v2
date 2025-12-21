@@ -1,5 +1,6 @@
 {
     "workbench.colorCustomizations": {
         "titleBar.inactiveBackground": "#4e0380"
-    }
+    },
+    "CodeGPT.apiKey": "Ollama"
 }

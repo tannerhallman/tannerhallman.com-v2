@@ -6,29 +6,41 @@
   scroll-behavior: smooth;
 }
 
+/* Liquibase logo - blue in light mode */
+.liquibase-logo {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(98%) saturate(4562%) hue-rotate(224deg) brightness(101%) contrast(104%);
+}
+
+:is(.dark .liquibase-logo) {
+  filter: none;
+}
+
+/* Sika logo - white in dark mode */
+:is(.dark .sika-logo) {
+  filter: brightness(0) invert(1);
+}
+
 *::selection {
   @apply bg-emerald-100 dark:bg-blue-400/70;
 }
 
 ::-webkit-scrollbar {
-  /* height: 10px; */
-  /* border-radius: 1px solid #d5d5d5; */
-  @apply h-2 w-[12px] rounded-sm border-gray-100/20;
+  @apply h-2 w-[10px] rounded-sm;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-rose-200/20 w-20;
+  @apply bg-gray-100 dark:bg-gray-800;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-blue-400/50 rounded-[4px];
+  @apply bg-gray-300 dark:bg-gray-600 rounded-[4px];
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-blue-400;
+  @apply bg-gray-400 dark:bg-gray-500;
 }
 
 @layer base {
@@ -98,11 +110,11 @@
   }
 
   .tech {
-    @apply hover:bg-gradient-to-tr hover:from-[#cae3e3] hover:via-[#f2e3ff] hover:to-[#ffdccb] dark:hover:from-[#cae3e320] dark:hover:via-[#f2e3ff35] dark:hover:to-[#ffdccb30] focus:bg-gradient-to-tr focus:from-[#cae3e3] focus:via-[#f2e3ff] focus:to-[#ffdccb];
+    @apply hover:bg-gray-50 dark:hover:bg-gray-800/50 focus:bg-gray-50 dark:focus:bg-gray-800/50;
   }
 
   .techWork {
-    @apply hover:bg-gradient-to-tr dark:hover:from-[#ebffff] dark:hover:via-[#f7edff] dark:hover:to-[#ffeae0] hover:from-[#ebffff] hover:via-[#f7edff] hover:to-[#ffeae0] focus:bg-gradient-to-tr focus:from-[#cae3e3] focus:via-[#f2e3ff] focus:to-[#ffdccb];
+    @apply hover:bg-gray-50 dark:hover:bg-gray-800/50 focus:bg-gray-50 dark:focus:bg-gray-800/50;
   }
 
   .iconClip {
@@ -110,7 +122,7 @@
   }
 
   .cirGradient {
-    background: linear-gradient(120deg, #14b8a6 10%, #a855f7 45%, #f97316 100%);
+    background: linear-gradient(120deg, #3b82f6 10%, #6366f1 50%, #8b5cf6 100%);
   }
 
   .land::before {

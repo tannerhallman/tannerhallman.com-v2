@@ -138,29 +138,25 @@ const tech = () => {
   return (
     <div className='min-h-[75vh] md:min-h-[73vh] px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 xl:px-80 mx-auto'>
       <Head>
-        <title>tech • tanner</title>
+        <title>Tech • Tanner Hallman</title>
         <link rel='icon' href='/Avatar-white.svg' />
       </Head>
       <main className='max-w-screen max-w-5xl mx-auto'>
         <div className='pt-24 flex flex-col mx-auto'>
-          <h2
-            className='selection:text-black/40 dark:selection:text-white/40 font-deca
-          bg-gradient-to-tr from-teal-300 to-blue-500 bg-clip-text
-          text-transparent items-center mx-auto text-2xl md:text-3xl lg:text-4xl
-          xl:text-5xl font-bold'>
+          <h2 className='font-deca text-gray-900 dark:text-white items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold'>
             Tech Stack
           </h2>
-          <p className='mt-8 font-normal lg:text-lg text-center md:w-[70%] mx-auto text-base md:text-[1.15rem] '>
-            Here are some of the technologies I am comfortable with!
+          <p className='mt-8 font-normal lg:text-lg text-center md:w-[70%] mx-auto text-base md:text-[1.15rem] text-gray-600 dark:text-gray-400'>
+            Technologies and tools I work with regularly.
           </p>
         </div>
         <div className='flex mx-auto justify-between mt-12 space-x-4 md:space-x-6 lg:space-x-auto items-center'>
           <button
-            className='font-space group bg-[#c7dada] dark:bg-[#939f9f] dark:hover:bg-[#828686] h-max w-max hover:bg-[#f7eeff]  px-1 py-1 rounded-full select-none '
+            className='font-space group bg-gray-100 dark:bg-gray-800 h-max w-max hover:bg-gray-200 dark:hover:bg-gray-700 px-2 py-2 rounded-full select-none transition-colors'
             onClick={leftArrow}>
-            <HiOutlineArrowLongLeft className=' w-5 h-3 sm:w-6 sm:h-4 md:w-8 md:h-5 lg:w-10 lg:h-6 stroke-[3] group-hover:fill-[#00bdbd]' />
+            <HiOutlineArrowLongLeft className='w-5 h-3 sm:w-6 sm:h-4 md:w-8 md:h-5 lg:w-10 lg:h-6 stroke-[2] text-gray-600 dark:text-gray-300' />
           </button>
-          <div className='bg-gradient-to-tr dark:from-[#dbfefe25] dark:via-[#f9f2ff10] dark:to-[#fff2ec20] from-[#dbfefe] via-[#f9f2ff] to-[#fff2ec] flex p-2 py-2 sm:p-3 md:p-4 lg:p-6  rounded-xl sm:rounded-[0.8rem] md:rounded-[1.2rem] lg:rounded-[1.6rem] mx-auto items-center justify-center space-x-2 sm:space-x-3 md:space-x-4 h-24 md:h-max lg:space-x-6 transition-all duration-700 ease-linear '>
+          <div className='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex p-2 py-2 sm:p-3 md:p-4 lg:p-6 rounded-xl sm:rounded-[0.8rem] md:rounded-[1.2rem] lg:rounded-[1.6rem] mx-auto items-center justify-center space-x-2 sm:space-x-3 md:space-x-4 h-24 md:h-max lg:space-x-6 transition-all duration-700 ease-linear'>
             <div className='basis-[30%] lg:basis-[25%] h-16 w-12 sm:h-20 sm:w-20 md:h-28 md:w-28 lg:h-32 lg:w-32 rounded-2xl '>
               <div className='flex mx-auto rounded-2xl relative w-full h-full bg-white'>
                 <Image
@@ -188,9 +184,9 @@ const tech = () => {
             </div>
           </div>
           <button
-            className='bg-[#fce4fe] dark:bg-[#a995ab] dark:hover:bg-[#7a747b] h-max w-max hover:bg-[#f7eeff] group px-1 py-1 rounded-full select-none'
+            className='bg-gray-100 dark:bg-gray-800 h-max w-max hover:bg-gray-200 dark:hover:bg-gray-700 group px-2 py-2 rounded-full select-none transition-colors'
             onClick={rightArrow}>
-            <HiOutlineArrowLongRight className='w-5 h-3 sm:w-6 sm:h-4 md:w-8 md:h-5 lg:w-10 lg:h-6 stroke-[3] group-hover:fill-[#dd44eb]' />
+            <HiOutlineArrowLongRight className='w-5 h-3 sm:w-6 sm:h-4 md:w-8 md:h-5 lg:w-10 lg:h-6 stroke-[2] text-gray-600 dark:text-gray-300' />
           </button>
         </div>
         <div className='mt-12 pb-12 grid grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8 w-[80%] sm:w-[75%] md:w-[70%] mx-auto items-center justify-items-center justify-center place-content-center '>

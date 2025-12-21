@@ -1,4 +1,3 @@
-import Blob from "@/components/Blob";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 
@@ -34,12 +33,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>tanner • cto & co-founder</title>
+        <title>Tanner Hallman • Software Engineer</title>
         <link rel='icon' href='/Avatar-white.svg' />
       </Head>
       <div className='px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]'>
         <div className='mb-24 max-w-[90rem] mx-auto'>
-          <Blob />
           <div className='flex flex-row justify-start items-center mt-20'>
             {currentTheme === "dark" ? (
               <Image
@@ -59,30 +57,26 @@ export default function Home() {
               />
             )}
             <div className='flex flex-col ml-4'>
-              <h3 className='font-bold sm:text-2xl md:text-2xl lg:text-4xl'>
-                Welcome 👋
+              <h3 className='font-medium text-gray-500 dark:text-gray-400 sm:text-lg md:text-lg lg:text-xl'>
+                Welcome
               </h3>
-              <h2 className='font-bold sm:text-2xl md:text-2xl lg:text-4xl'>
-                i'm tanner hallman 🚀
+              <h2 className='font-bold sm:text-2xl md:text-2xl lg:text-4xl text-gray-900 dark:text-white'>
+                I'm Tanner Hallman
               </h2>
-              <h4 className='text-gray-400 xl:font-bold sm:font-bold md:font-bold sm:text-xl md:text-xl lg:text-2xl'>
-                cto & co-founder
+              <h4 className='text-gray-500 dark:text-gray-400 font-medium sm:text-lg md:text-lg lg:text-xl'>
+                Software Engineer (Ex-Founder & CTO)
               </h4>
             </div>
           </div>
-          <div className='mt-12 m:text-xl md:text-xl lg:text-2xl'>
-            <p className='font-light sm:leading-6 md:leading-6 lg:leading-8'>
-              With a fervent passion for technology and innovation, I have
-              carved a niche for myself in native mobile app development,
-              immersive web app experiences, and intricate backend application
-              constructions. My journey includes co-founding and building{" "}
-              <span className='font-medium select-none animate-text bg-gradient-to-br from-[#33475B] dark:from-[#1a6c6c] via-[#fff4f4] dark:via-[#fff] dark:text-black  text-border2 to-[#269796] dark:to-[#269796] rounded px-2 py-[0.05rem] '>
-                Coworks
-              </span>{" "}
-              - a groundbreaking SaaS product tailored for coworking spaces.
-              Under my leadership, Coworks transcended from a mere idea to a
-              venture boasting an ARR of ~500k, hundreds of loyal customers, and
-              an impressive ~$1 million seed funding.
+          <div className='mt-12 text-base md:text-lg lg:text-xl'>
+            <p className='font-normal text-gray-700 dark:text-gray-300 leading-relaxed'>
+              I'm a software engineer with a passion for building products that make a difference.
+              Currently at <span className='font-semibold text-gray-900 dark:text-white'>Liquibase</span>,
+              building cloud-native database migration tools. Previously, I co-founded{" "}
+              <span className='font-semibold text-gray-900 dark:text-white'>Coworks</span> -
+              a SaaS platform for coworking spaces that grew to ~$500k ARR, hundreds of customers,
+              and ~$1M in seed funding. I specialize in full-stack development,
+              cloud architecture, and turning complex problems into elegant solutions.
             </p>
           </div>
         </div>

@@ -2,30 +2,70 @@ import coworks from "../public/work/coworks-product/coworks.png";
 import coworksproduct1 from "../public/work/coworks-product/product-1.webp";
 import coworksproduct2 from "../public/work/coworks-product/product-2.webp";
 import coworksproduct3 from "../public/work/coworks-product/product-3.webp";
-
-import thefacelessmany from "../public/work/tfm-product/fm-logo.png";
-import thefacelessmanyproduct1 from "../public/work/tfm-product/product-1.png";
-import thefacelessmanyproduct2 from "../public/work/tfm-product/product-2.png";
-
 import mkr from "../public/work/mkr-product/mkr-logo.png";
 import mkrproduct1 from "../public/work/mkr-product/product-1.png";
 import mkrproduct2 from "../public/work/mkr-product/product-2.png";
 import mkrproduct3 from "../public/work/mkr-product/product-3.png";
+import thefacelessmany from "../public/work/tfm-product/fm-logo.png";
+import thefacelessmanyproduct1 from "../public/work/tfm-product/product-1.png";
+import thefacelessmanyproduct2 from "../public/work/tfm-product/product-2.png";
+import liquibaseLogo from "../public/work/liquibase-logo.svg";
+import sikaLogo from "../public/work/sika-logo.svg";
+import livethemesLogo from "../public/icons/live-themes.png";
 
 const data = [
   {
     id: 1,
+    image: liquibaseLogo,
+    title: "Liquibase",
+    subtext: "Cloud Database Migration Platform",
+    description:
+      "Building a greenfield SaaS platform extending Liquibase's core database migration platform into the cloud.",
+    paragraphs: [
+      "At Liquibase, I'm building a greenfield SaaS platform that extends their industry-leading database migration tool into the cloud. This platform enables teams to manage database migrations through an intuitive web interface, bringing enterprise-grade database DevOps to a broader audience.",
+      "I've led architectural design initiatives and foundational implementations, including cloud-native microservices, CI/CD automation, and multi-tenant customer segmentation. A key contribution was designing and implementing a scalable, event-driven microservice using websockets to support real-time data synchronization for users.",
+      "Beyond core engineering, I've championed an AI initiative across the company to leverage AI as a tool in our workflows. This includes helping lead the design and implementation of AI-powered features within the platform to provide insights on customer database migration pipelines and deliver proactive, actionable solutions.",
+      "Working closely with product and design teams, I've helped simplify complex developer workflows into intuitive, easy-to-use interfaces - making database migrations accessible to teams of all sizes.",
+    ],
+    slug: "liquibase",
+    link: "/work/liquibase",
+    liveURL: "https://liquibase.com",
+    target: "_self",
+    productShots: [],
+  },
+  {
+    id: 2,
+    image: sikaLogo,
+    title: "Sika Health",
+    subtext: "Healthcare Spending Platform",
+    description:
+      "A platform revolutionizing HSA & FSA spending through automated healthcare transaction classification.",
+    paragraphs: [
+      "At Sika Health, I orchestrated a team of engineers in developing and maintaining a robust Healthcare Spending Account platform that's transforming how people use their HSA and FSA benefits.",
+      "One of the most impactful projects was collaborating closely with the Stripe team to pioneer advancements in payment rails. We facilitated the seamless transmission of healthcare data to card networks for automated classification of healthcare card transactions (auto-substantiation), eliminating manual receipt submission for millions of transactions.",
+      "I spearheaded the development of the 'Letter of Medical Necessity' feature, enabling automatic substantiation of healthcare item purchases approved by doctors. Additionally, I introduced an AI-driven customer service chat feature using RAG, optimizing support scalability while reducing resource allocation.",
+      "On the infrastructure side, I directed platform architecture management using Terraform and Google Cloud Platform (GCP), achieving a 50% reduction in monthly architecture spending. I also planned and executed a migration from a fragmented tech stack (Rust, Python, Go, JavaScript) into a unified TypeScript architecture, significantly enhancing efficiency and maintainability.",
+      "Other key contributions included engineering a scalable webhooks architecture for public API consumers, developing and maintaining a public API for partner integrations, and establishing internal engineering standards and best practices.",
+    ],
+    slug: "sikahealth",
+    link: "/work/sikahealth",
+    liveURL: "https://sikahealth.com",
+    target: "_self",
+    productShots: [],
+  },
+  {
+    id: 3,
     image: coworks,
     title: "Coworks",
-    subtext: "Coworking Saas Platform",
+    subtext: "Coworking SaaS Platform",
     description:
       "A robust SaaS product built to help coworking spaces manage and automate the member and guest experience.",
     paragraphs: [
-      "I am a proud co-founder of Coworks, a comprehensive platform tailored for the modern coworking space. The platform offers a complete suite of solutions designed to cater to the diverse needs of today's coworking environments. From flex office spaces to makerspaces, entrepreneurship centers, and even coworking combined with childcare, my platform provides an all-encompassing solution.",
-      "One of the core strengths of the platform platform is its user-friendly platform, which is designed to delight both members and managers. With features such as a mobile app, member directory, automated billing, events management, room booking, and more, I've ensured that every aspect of coworking management is covered. The platform also boasts advanced features like analytics, software integrations, and resource booking, setting it apart from other platforms in the market.",
-      "Testimonials from satisfied users further validate the platform's efficacy. Comments like 'The analytics and dashboard are where Coworks sets themselves apart' and 'Having Coworks is like an extra team member' highlight the tangible benefits users have experienced. ",
-      "The inspiration behind Coworks stems from personal experience. Having worked out of coworking spaces myself, we recognized the challenges faced by operators and managers. With this insight, we built a platform that offers intuitive tools, mobile-first apps, and smart solutions, all while avoiding unnecessary, bloated features that can hinder daily operations.",
-      "In essence, Coworks is not just a website; it's a reflection of my commitment to enhancing the coworking experience. Through this platform, I aim to streamline operations, foster community connections, and support the growth of coworking spaces globally.",
+      "I am a proud co-founder of Coworks, a comprehensive platform tailored for the modern coworking space. We built and led this B2B2C SaaS product from 0 to ~500k ARR, hundreds of customers, and ~$1 million in seed funding.",
+      "I was responsible for coding and maintaining a suite of software products: a React.js dashboard, a Rails API, two native mobile apps (iOS and Android) with React Native, and a NodeJS server powering conference room booking and front-desk guest check-in tablets. The stack included ReactJS Hooks, Redux, GraphQL, Apollo, NodeJS, ExpressJS, Socket.io, TailwindCSS, Prisma, NestJS, and Redis, with integrations to Stripe, Google Calendar, Twilio, SendGrid, Outlook, Firebase, and more.",
+      "Beyond engineering, I wore many hats: Senior Engineer, DevOps Engineer, Product Manager, Sprint/Scrum Manager, Developer Experience Manager, Automation Engineer, Customer Experience Engineer, and Technical Manager. This breadth of experience gave me deep insight into building products that truly serve customers.",
+      "Coworks was founded in 2017 as an internal product of Lithios and was officially incorporated in June 2019. We were also accepted into the Techstars Proptech Accelerator in 2019, where we refined our business and product strategy.",
+      "The platform offers intuitive tools, mobile-first apps, and smart solutions for coworking spaces of all types - from flex offices to makerspaces and entrepreneurship centers.",
     ],
     slug: "coworks",
     link: "/work/coworks",
@@ -34,7 +74,27 @@ const data = [
     productShots: [coworksproduct1, coworksproduct2, coworksproduct3],
   },
   {
-    id: 2,
+    id: 4,
+    image: livethemesLogo,
+    title: "LiveThemes",
+    subtext: "Theme Editor & Marketplace for Ableton Live",
+    description:
+      "A full-stack SaaS application for creating, sharing, and selling custom themes for Ableton Live.",
+    paragraphs: [
+      "LiveThemes is a passion project born from my love of music production. It's a complete theme editor and marketplace that enables Ableton Live users to customize their DAW's visual appearance with support for 300+ color properties across Ableton versions 10, 11, and 12.",
+      "The platform features a real-time visual editor where users can see their color changes instantly applied to an SVG preview of the Ableton interface. Users can create themes from scratch, import existing .ask theme files, or remix other creators' themes with automatic attribution.",
+      "I built a full community marketplace where creators can publish free themes or monetize their work through Stripe Connect integration. The platform handles payments, creator payouts (90% to creators), and purchase tracking - a complete e-commerce solution for digital goods.",
+      "The tech stack showcases modern full-stack development: Next.js 15 with React Server Components, TypeScript throughout, Supabase for auth and PostgreSQL database, Drizzle ORM for type-safe queries, and AWS infrastructure via SST. I implemented ISR with optimized database queries that reduced bandwidth by 80-90%.",
+      "Additional features include PostHog analytics, Sentry error tracking, comprehensive Zod validation for theme files, and a robust testing setup. This project demonstrates my ability to build production-grade applications from concept to deployment.",
+    ],
+    slug: "livethemes",
+    link: "/work/livethemes",
+    liveURL: "https://livethemes.app",
+    target: "_self",
+    productShots: [],
+  },
+  {
+    id: 5,
     image: thefacelessmany,
 
     title: "The Faceless Many",
@@ -55,7 +115,7 @@ const data = [
     productShots: [thefacelessmanyproduct1, thefacelessmanyproduct2],
   },
   {
-    id: 3,
+    id: 6,
     image: mkr,
 
     title: "Maiar Kart Racing",
