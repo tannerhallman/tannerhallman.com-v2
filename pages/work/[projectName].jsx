@@ -25,77 +25,75 @@ export default function ProjectName({}) {
   return (
     <div className='px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]'>
       <Head>
-        <title>{projectName} • work</title>
+        <title>{project.title} • Tanner Hallman</title>
         <link rel='icon' href='/Avatar-white.svg' />
       </Head>
-      <main className='  max-w-screen '>
-        <div className=' mx-auto pt-16 -pb-10 max-w-7xl'>
-          <div className=' mx-auto flex flex-col text-center justify-center'>
-            <Image
-              loading='lazy'
-              src={project?.image}
-              alt=''
-              height={150}
-              className='drop-shadow-2xl mt-10 justify-self-center self-center'
-            />
-            <h1
-              className={`mt-6 mb-12 font-deca bg-gradient-to-bl from-blue-900 via-blue-400 to-blue-900 bg-clip-text text-transparent selection:text-gray-700 dark:selection:text-white/90 items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold`}>
+      <main className='max-w-screen'>
+        <div className='mx-auto pt-16 -pb-10 max-w-7xl'>
+          <div className='mx-auto flex flex-col text-center justify-center'>
+            {project?.image && (
+              <Image
+                loading='lazy'
+                src={project?.image}
+                alt={project.title}
+                height={150}
+                className={`mt-10 justify-self-center self-center ${
+                  project.slug === 'liquibase' ? 'liquibase-logo' : ''
+                } ${project.slug === 'sikahealth' ? 'sika-logo' : ''}`}
+              />
+            )}
+            <h1 className='mt-6 mb-4 font-deca text-gray-900 dark:text-white items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold'>
               {project.title}
             </h1>
           </div>
-          <div className=' mx-auto flex flex-col text-center justify-center'>
-            <h4
-              className={`mb-12 font-deca bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-300 via-fuchsia-600 to-orange-600 bg-clip-text text-transparent selection:text-gray-700 dark:selection:text-white/90 items-center mx-auto text-base md:text-lg lg:text-lg xl:text-lg font-bold`}>
+          <div className='mx-auto flex flex-col text-center justify-center'>
+            <p className='mb-8 font-medium text-gray-500 dark:text-gray-400 items-center mx-auto text-base md:text-lg'>
               {project?.subtext}
-            </h4>
+            </p>
           </div>
-          <div className='flex justify-center space-x-3 md:space-x-6 lg:space-x-8 items-center  my-4'>
-            <div className='group border-blue-400 hover:bg-blue-400 hover:text-white hover:drop-shadow-2xl text-purple-500 rounded-md md:rounded-xl px-2 py-1 md:px-4 md:py-2 shadow-md drop-shadow-lg dark:bg-blue-400 dark:shadow-none dark:hover:shadow-white select-none dark:text-white shadow-blue-300 '>
+          <div className='flex justify-center space-x-3 md:space-x-4 items-center my-6'>
+            <Link
+              href={project?.liveURL}
+              target='_blank'
+              className='flex items-center font-medium space-x-2 text-sm md:text-base bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-4 py-2 transition-colors'>
+              <FiFileText className='stroke-2' />
+              <span>Live Site</span>
+            </Link>
+            {project?.githubURL && (
               <Link
-                href={project?.liveURL}
+                href={project?.githubURL}
                 target='_blank'
-                className='flex items-center font-normal lg:font-bold space-x-2 text-sm md:text-base'>
-                <FiFileText className='dark:stroke-white stroke-blue-400 stroke-2 group-hover:stroke-white ' />
-                <p>Live Site</p>
+                className='flex items-center font-medium space-x-2 text-sm md:text-base bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg px-4 py-2 transition-colors border border-gray-200 dark:border-gray-700'>
+                <FaGithub />
+                <span>View Code</span>
               </Link>
-            </div>
-            <div className=' group border-blue-400 hover:bg-blue-400 text-blue-500 hover:text-white hover:drop-shadow-2xl rounded-md md:rounded-xl px-2 py-1 md:px-4 md:py-2 shadow-md drop-shadow-lg dark:bg-blue-400 dark:shadow-none dark:hover:shadow-white select-none dark:text-white shadow-blue-300'>
-              <Link
-                href={
-                  project?.githubURL === undefined ? "/" : project?.githubURL
-                }
-                target='_blank'
-                disabled={project?.githubURL === undefined}
-                className='flex items-center font-normal lg:font-bold space-x-2 text-sm md:text-base  '>
-                <FaGithub className=' dark:stroke-white stroke-blue-400 stroke-2 group-hover:stroke-white ' />
-                <p>
-                  Code
-                  {project?.githubURL === undefined ? " (Closed Source)" : ""}
-                </p>
-              </Link>
-            </div>
+            )}
           </div>
-          <div className=' mx-auto flex flex-col '>
+          <div className='mx-auto flex flex-col max-w-3xl'>
             {project?.paragraphs?.map((pg, index) => {
               return (
-                <h4
+                <p
                   key={`${project?.title}-${index}`}
-                  className={`mt-10 only:mb-12 font-deca bg-gradient-to-br bg-clip-text selection:text-gray-700 dark:selection:text-white/90 items-center mx-auto text-sm md:text-lg lg:text-lg xl:text-lg `}>
+                  className='mt-6 text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed'>
                   {pg}
-                </h4>
+                </p>
               );
             })}
           </div>
-          {project?.productShots?.map((shot, index) => (
-            <Image
-              key={`product-shot-${index}`}
-              loading='lazy'
-              src={shot}
-              alt=''
-              width='max'
-              className='drop-shadow-2xl mt-10'
-            />
-          ))}
+          {project?.productShots?.length > 0 && (
+            <div className='mt-12 space-y-8'>
+              <h3 className='text-xl font-semibold text-gray-900 dark:text-white text-center'>Screenshots</h3>
+              {project?.productShots?.map((shot, index) => (
+                <Image
+                  key={`product-shot-${index}`}
+                  loading='lazy'
+                  src={shot}
+                  alt={`${project.title} screenshot ${index + 1}`}
+                  className='rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm'
+                />
+              ))}
+            </div>
+          )}
         </div>
       </main>
     </div>

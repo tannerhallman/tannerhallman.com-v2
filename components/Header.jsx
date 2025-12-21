@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
-import { MdLightMode, MdDarkMode, MdDownload } from "react-icons/md";
+import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -136,17 +136,6 @@ const Header = () => {
               </Link>
             </li>
           ))}
-          {/* <li
-            key={4}
-            className='md:ml-8  text-base xl:text-[1.1rem] font-regular md:my-0 my-7'>
-            <a
-              href='/Resume-Tanner-Hallman.pdf'
-              target='_blank'
-              rel='noreferrer'
-              className='text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-500 duration-500'>
-              resume
-            </a>
-          </li> */}
         </ul>
       </div>
     </nav>
