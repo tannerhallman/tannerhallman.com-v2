@@ -9,6 +9,11 @@ const nextConfig = {
         destination: "https://livethemes.vercel.app",
         permanent: true,
       },
+      {
+        source: "/meet",
+        destination: "https://cal.com/tannerhallman/meet?duration=30",
+        permanent: true,
+      },
     ];
   },
 };
